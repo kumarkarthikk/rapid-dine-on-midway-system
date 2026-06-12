@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Developers - Kau-shi-can</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      background-color: #c3e5f6;
+      overflow: hidden;
+    }
+
+    header, footer {
+      background-color: #0d47a1;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 7vh;
+      font-size: 18px;
+    }
+
+    main {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      transition: all 2s ease-in-out;
+      opacity: 0;
+    }
+
+    .big {
+      background-color: #0d47a1;
+      width: 10vh;
+      height: 10vh;
+    }
+
+    .small {
+      background-color: #1565c0;
+      width: 6vh;
+      height: 6vh;
+    }
+
+    .circle img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+
+    .name {
+      position: absolute;
+      text-align: center;
+      font-weight: bold;
+      color: #0d47a1;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+
+  <header>Kau-shi-can Developer Team</header>
+
+  <main>
+    <!-- Circles -->
+    <div class="circle big" id="bigCircle">
+      <img src="https://res.cloudinary.com/de6ugxmor/image/upload/v1745900285/WhatsApp_Image_2025-04-29_at_09.47.48_5fe13bf0_bzl5by.jpg" />
+    </div>
+    <div class="circle small" id="leftCircle">
+      <img src="https://res.cloudinary.com/de6ugxmor/image/upload/v1745890309/WhatsApp_Image_2025-04-29_at_07.01.28_0cb15a93_anue89.jpg" />
+    </div>
+    <div class="circle small" id="rightCircle">
+      <img src="https://res.cloudinary.com/de6ugxmor/image/upload/v1745890277/WhatsApp_Image_2025-04-29_at_06.58.36_cdcb1d6b_oqjfo3.jpg" />
+    </div>
+    <div class="circle small" id="bottomCircle">
+      <img src="https://res.cloudinary.com/de6ugxmor/image/upload/v1745893864/WhatsApp_Image_2025-04-29_at_08.00.52_cfdb5ad3_mzwvx5.jpg" />
+    </div>
+
+    <!-- Names -->
+    <div class="name" id="nameBig">Kumar Karthikk
+        <p>Webpage Animator And Designer</p>
+    </div>
+    <div class="name" id="nameLeft">Pavan Adithya 
+        <p>UI/UX Designer</p>
+    </div>
+    <div class="name" id="nameRight">Dhanush Kumar
+        <p>Ai integration</p>
+    </div>
+    <div class="name" id="nameBottom">Karthikeya
+        <p>Back-End Developer and Tester</p>
+    </div>
+  </main>
+
+  <footer>Contact us at Gmail: kaushican@gmail.com | Insta: kaushican | X: kaushican</footer>
+
+  <script>
+    window.onload = () => {
+      const big = document.getElementById("bigCircle");
+      const left = document.getElementById("leftCircle");
+      const right = document.getElementById("rightCircle");
+      const bottom = document.getElementById("bottomCircle");
+
+      const nameBig = document.getElementById("nameBig");
+      const nameLeft = document.getElementById("nameLeft");
+      const nameRight = document.getElementById("nameRight");
+      const nameBottom = document.getElementById("nameBottom");
+
+      const startX = 5; // from developer icon position
+      const startY = 93;
+
+      // Set initial positions
+      [big, left, right, bottom].forEach(circle => {
+        circle.style.left = `${startX}vw`;
+        circle.style.top = `${startY}vh`;
+        circle.style.opacity = 1;
+      });
+
+      setTimeout(() => {
+        // Big Circle final
+        big.style.width = "35vh";
+        big.style.height = "35vh";
+        big.style.left = "50%";
+        big.style.top = "10vh";
+        big.style.transform = "translateX(-50%)";
+
+        // Small Circles final
+        const radius = 20;
+        left.style.width = right.style.width = bottom.style.width = "20vh";
+        left.style.height = right.style.height = bottom.style.height = "20vh";
+
+        left.style.left = "calc(50% - 35vh - 10vh)";
+        left.style.top = "20vh";
+
+        right.style.left = "calc(50% + 35vh + 10vh - 20vh)";
+        right.style.top = "20vh";
+
+        bottom.style.left = "50%";
+        bottom.style.top = "55vh";
+        bottom.style.transform = "translateX(-50%)";
+
+        // Show names
+        setTimeout(() => {
+          nameBig.style.top = "46vh";
+          nameBig.style.left = "50%";
+          nameBig.style.transform = "translateX(-50%)";
+          nameBig.style.opacity = 1;
+
+          nameLeft.style.top = "42vh";
+          nameLeft.style.left = "calc(50% - 35vh - 10vh)";
+          nameLeft.style.opacity = 1;
+
+          nameRight.style.top = "42vh";
+          nameRight.style.left = "calc(50% + 35vh + 10vh - 20vh)";
+          nameRight.style.opacity = 1;
+
+          nameBottom.style.top = "77vh";
+          nameBottom.style.left = "50%";
+          nameBottom.style.transform = "translateX(-50%)";
+          nameBottom.style.opacity = 1;
+        }, 2000);
+      }, 500);
+    };
+  </script>
+
+</body>
+</html>

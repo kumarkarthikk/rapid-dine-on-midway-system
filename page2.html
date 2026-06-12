@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kaushikan Login - Page 2</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #c3e5f6; /* Light Blue background from Page 1 */
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      width: 80vw;
+      height: 80vh;
+    }
+
+    .left-side {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+    }
+
+    /* For Background Image */
+    .left-side .image-box {
+      width: 80%;
+      height: 80%;
+      background-image: url('https://res.cloudinary.com/de6ugxmor/image/upload/v1745837878/Screenshot_2025-04-28_162744_kxmnxv.png'); /* Replace with your image link */
+      background-size: cover;
+      background-position: center;
+      border-radius: 10px;
+    }
+
+    .right-side {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 80%;
+    }
+
+    .input-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 2px solid #0d47a1;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    .input-box input {
+      width: 85%;
+      border: none;
+      outline: none;
+      padding: 5px;
+      font-size: 16px;
+    }
+
+    .eye-icon {
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .login-btn {
+      background-color: #0d47a1; /* Dark Royal Blue */
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .login-btn:hover {
+      background-color: #1565c0; /* Lighter Vivid Blue */
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Left Side (Image) -->
+    <div class="left-side">
+      <div class="image-box"></div>
+    </div>
+
+    <!-- Right Side (Form) -->
+    <div class="right-side">
+      <div class="form-container">
+        <!-- Username -->
+        <div class="input-box">
+          <input type="text" id="username" placeholder="Username" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Username'">
+        </div>
+
+        <!-- Password -->
+        <div class="input-box">
+          <input type="password" id="password" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
+          <span class="eye-icon" id="eye-icon" onclick="togglePasswordVisibility()">👁️</span>
+        </div>
+
+        <!-- Login Button -->
+        <button class="login-btn" onclick="validateLogin()">Login</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Toggle password visibility
+    function togglePasswordVisibility() {
+      const passwordField = document.getElementById("password");
+      const eyeIcon = document.getElementById("eye-icon");
+
+      if (passwordField.type === "password") {
+        passwordField.type = "text";
+        eyeIcon.textContent = "🙈"; // Change eye icon to closed
+      } else {
+        passwordField.type = "password";
+        eyeIcon.textContent = "👁️"; // Change eye icon to open
+      }
+    }
+
+    // Validate login
+    function validateLogin() {
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      // Simple validation: username and password must match
+      if (username === "karthikk" && password === "karthikk") {
+        // Redirect to page 3
+        window.location.href = "page3.html";
+      } else {
+        alert("Invalid Username or Password");
+      }
+    }
+  </script>
+
+</body>
+</html>

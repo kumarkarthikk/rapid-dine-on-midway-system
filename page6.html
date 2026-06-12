@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kaushikan Page 6</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Header Style */
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 12vh;
+      background-color: #0d47a1;
+      padding: 0 5%;
+      color: white;
+      position: relative;
+    }
+
+    .logo {
+      width: 50px;
+      height: 50px;
+      background-color: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      position: absolute;
+      left: 5%;
+    }
+
+    .brand-name {
+      font-size: 40px;
+      font-weight: bold;
+      margin-left: 20px;
+    }
+
+    /* Chatbot Icon */
+    .chatbot-icon {
+        width: 40px;
+        height: 40px;
+        background-color: white;
+        border-radius: 50%;
+        position: absolute;
+        right: 20px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s;
+      }
+  
+      .chatbot-icon:hover {
+        background-color: #1565c0;
+      }
+  
+      .chatbot-icon img {
+        width: 25px;
+        height: 25px;
+      }
+
+    /* Main Content */
+    .main-content {
+      background-color: #c3e5f6;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* 3-column Layout */
+    .image-container {
+      display: flex;
+      justify-content: space-around;
+      width: 80%;
+      gap: 20px;
+    }
+
+    .image-box {
+      width: 200px;
+      height: 250px;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #0d47a1;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      position: relative;
+      padding: 10px;
+    }
+    .image-box {
+        width: 220px; /* Slightly wider box */
+        height: 320px; /* Increased height */
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start; /* Start from top */
+        border: 2px solid #0d47a1;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px; /* Smooth corners */
+      }
+      
+      .image-box {
+        width: 280px; /* Increased width */
+        height: 340px; /* Slightly increased height */
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        border: 2px solid #0d47a1;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+      }
+      
+      .image-box img {
+        width: 100%;
+        height: 160px; /* Little taller for better image */
+        object-fit: contain;
+        padding: 5px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+      }
+      
+      .image-box p {
+        font-size: 18px; /* Little bigger text */
+        font-weight: bold;
+        color: #0d47a1;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        word-break: break-word;
+      }
+      
+      .ratings, .price, .distance, .availability {
+        font-size: 15px;
+        margin-top: 4px;
+        text-align: center;
+      }
+      
+
+    .checkbox-container {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    .footer-info {
+      font-size: 12px;
+      color: #fff;
+      text-align: center;
+    }
+
+    /* Footer Style */
+    footer {
+      height: 7vh;
+      background-color: #0d47a1;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      padding: 10px;
+    }
+
+    .payment-box {
+        position: fixed;
+        bottom: 15vh; /* Add 15vh bottom padding */
+        right: 20px;
+        background-color: #0d47a1;
+        color: white;
+        padding: 15px 30px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 16px;
+        transition: background-color 0.3s;
+      }
+      
+      .payment-box:hover {
+        background-color: #004080;
+      }
+      
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img class="logo" src="https://res.cloudinary.com/de6ugxmor/image/upload/v1745771069/WhatsApp_Image_2025-04-27_at_20.58.28_1aecb6e6_hp9dzp.jpg" alt="Logo">
+    </div>
+    <div class="brand-name">Kau-shi-can</div>
+    
+    <!-- Chatbot Icon (Right side of the header) -->
+    <div class="chatbot-icon" onclick="location.href='chatbot.html'">
+        <img src="https://img.icons8.com/ios-filled/50/000000/chat.png" alt="Chatbot">
+      </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <h2>Select your food items</h2>
+    <div class="image-container">
+      <!-- Box 1 -->
+      <div class="image-box">
+        <input type="checkbox" id="food1" name="food1" value="food1" class="checkbox-container">
+        <img src="https://res.cloudinary.com/de6ugxmor/image/upload/v1745867279/download_ebizug.jpg" alt="Hotel sangeetha">
+        <p>Hotel sangeetha</p>
+        <div class="ratings">
+          ★★★★☆
+        </div>
+        <div class="price">Price: ₹2500</div>
+        <div class="distance">Distance: 5 km</div>
+        <div class="availability">Availability: 90%</div>
+      </div>
+
+      <!-- Box 2 -->
+      <div class="image-box">
+        <input type="checkbox" id="food2" name="food2" value="food2" class="checkbox-container">
+        <img src="https://res.cloudinary.com/de6ugxmor/image/upload/v1745867312/images_ogndge.jpg" alt="Hotel Alpha" >
+        <p>Hotel Alpha</p>
+        <div class="ratings">
+          ★★★☆☆
+        </div>
+        <div class="price">Price: ₹2000</div>
+        <div class="distance">Distance: 3 km</div>
+        <div class="availability">Availability: 80%</div>
+      </div>
+
+      <!-- Box 3 -->
+      <div class="image-box">
+        <input type="checkbox" id="food3" name="food3" value="food3" class="checkbox-container">
+        <img src="https://res.cloudinary.com/de6ugxmor/image/upload/v1745867294/download_au7oe1.jpg" alt="Hotel Krazy">
+        <p>Hotel Krazy</p>
+        <div class="ratings">
+          ★★★★★
+        </div>
+        <div class="price">Price: ₹3500</div>
+        <div class="distance">Distance: 4 km</div>
+        <div class="availability">Availability: 95%</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Payment Box at the right bottom -->
+  <a href="page7.html" class="payment-box">
+    Proceed to Payment
+  </a>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-info">
+      <p>Contact us at Gmail: kaushican@gmail.com | Insta: kaushican | X: kaushican</p>
+    </div>
+  </footer>
+
+</body>
+</html>

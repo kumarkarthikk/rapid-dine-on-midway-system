@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kaushikan - Payment Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Header Style */
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 12vh;
+      background-color: #0d47a1;
+      padding: 0 5%;
+      color: white;
+      position: relative;
+    }
+
+    .logo {
+      width: 50px;
+      height: 50px;
+      background-color: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      position: absolute;
+      left: 5%;
+    }
+
+    .brand-name {
+      font-size: 40px;
+      font-weight: bold;
+      margin-left: 20px;
+    }
+
+    /* Chatbot Icon */
+    .chatbot-icon {
+      width: 40px;
+      height: 40px;
+      background-color: white;
+      border-radius: 50%;
+      position: absolute;
+      right: 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s;
+    }
+  
+    .chatbot-icon:hover {
+      background-color: #1565c0;
+    }
+  
+    .chatbot-icon img {
+      width: 25px;
+      height: 25px;
+    }
+
+    /* Center Content */
+    .main-content {
+      background-color: #c3e5f6;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .content-box {
+      background-color: white;
+      width: 35%;
+      min-height: 50%;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .heading {
+      font-size: 26px;
+      font-weight: bold;
+      color: #0d47a1;
+    }
+
+    .qr-code {
+      width: 80%;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .payment-message {
+      font-size: 18px;
+      font-weight: normal;
+      color: #0d47a1;
+      text-align: center;
+    }
+
+    /* Footer Style */
+    footer {
+      height: 7vh;
+      background-color: #0d47a1;
+      color: white;
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      padding: 0 10px;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .developer-link {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .developer-link img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      transition: transform 0.3s;
+    }
+
+    .developer-link:hover img {
+      transform: scale(1.1);
+    }
+
+    .footer-text {
+      flex: 1;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+        <img class="logo" src="https://res.cloudinary.com/de6ugxmor/image/upload/v1745771069/WhatsApp_Image_2025-04-27_at_20.58.28_1aecb6e6_hp9dzp.jpg" alt="Logo">
+    </div>
+    <div class="brand-name">Kau-shi-can</div>
+
+    <!-- Chatbot Icon -->
+    <div class="chatbot-icon" onclick="location.href='chatbot.html'">
+        <img src="https://img.icons8.com/ios-filled/50/000000/chat.png" alt="Chatbot">
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <div class="content-box">
+      <div class="heading">Make the Payment</div>
+
+      <!-- QR Code Image -->
+      <img src="https://res.cloudinary.com/de6ugxmor/image/upload/v1745867338/WhatsApp_Image_2025-04-29_at_00.36.34_9d2f52b0_e0cxkf.jpg" alt="QR Code" class="qr-code">
+
+      <div class="payment-message">Please scan the QR code to make your payment.</div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <!-- Developer Link on Left -->
+    <div class="developer-link" onclick="location.href='developer.html'">
+      <img src="https://res.cloudinary.com/de6ugxmor/image/upload/v1745869831/download_whrlzb.png" alt="Developer">
+    </div>
+
+    <!-- Footer Text in Center -->
+    <div class="footer-text">
+      Contact us at Gmail: kaushican@gmail.com | Insta: kaushican | X: kaushican
+    </div>
+  </footer>
+
+</body>
+</html>
