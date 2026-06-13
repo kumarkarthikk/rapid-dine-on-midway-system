@@ -1,98 +1,101 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kau-shi-can Logo Animation</title>
+  <title>Midway Rapid Dine</title>
+
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
     }
 
-    body {
-      height: 100vh;
-      width: 100vw;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #c3e5f6; /* Light Blue background */
-      font-family: 'Poppins', sans-serif;
-      overflow: hidden;
-      flex-direction: column;
+    body{
+      height:100vh;
+      width:100vw;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background-color:#c3e5f6;
+      font-family:'Poppins',sans-serif;
+      overflow:hidden;
+      flex-direction:column;
     }
 
-    .logo {
-      width: 80vw;
-      height: 80vw;
-      max-width: 500px;
-      max-height: 500px;
-      border-radius: 50%;
-      object-fit: cover;
-      animation: shrinkLogo 3s forwards;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    .logo{
+      width:80vw;
+      height:80vw;
+      max-width:500px;
+      max-height:500px;
+      border-radius:50%;
+      object-fit:cover;
+      animation:shrinkLogo 3s forwards;
+      box-shadow:0 0 20px rgba(0,0,0,0.5);
     }
 
-    .text-container {
-      text-align: center;
-      margin-top: 20px;
-      opacity: 0;
-      animation: appearText 2s 3s forwards;
+    .text-container{
+      text-align:center;
+      margin-top:20px;
+      opacity:0;
+      animation:appearText 2s 3s forwards;
     }
 
-    .name {
-      font-size: 3rem;
-      font-weight: bold;
-      color: #0d47a1; /* Dark Royal Blue */
-      text-shadow: 2px 2px 8px rgba(0, 0, 50, 0.6);
-      margin-bottom: 10px;
+    .name{
+      font-size:3rem;
+      font-weight:bold;
+      color:#0d47a1;
+      text-shadow:2px 2px 8px rgba(0,0,50,0.6);
+      margin-bottom:10px;
     }
 
-    .tagline {
-      font-size: 1.4rem;
-      color: #1565c0; /* Lighter Vivid Blue */
-      text-shadow: 1px 1px 6px rgba(0, 0, 80, 0.4);
+    .tagline{
+      font-size:1.4rem;
+      color:#1565c0;
+      text-shadow:1px 1px 6px rgba(0,0,80,0.4);
     }
 
-    @keyframes shrinkLogo {
-      from {
-        width: 80vw;
-        height: 80vw;
+    @keyframes shrinkLogo{
+      from{
+        width:80vw;
+        height:80vw;
       }
-      to {
-        width: 150px;
-        height: 150px;
+      to{
+        width:150px;
+        height:150px;
       }
     }
 
-    @keyframes appearText {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
+    @keyframes appearText{
+      from{
+        opacity:0;
+        transform:translateY(20px);
       }
-      to {
-        opacity: 1;
-        transform: translateY(0px);
+      to{
+        opacity:1;
+        transform:translateY(0px);
       }
     }
   </style>
 </head>
+
 <body>
 
-  <img class="logo" src="https://res.cloudinary.com/de6ugxmor/image/upload/v1745771069/WhatsApp_Image_2025-04-27_at_20.58.28_1aecb6e6_hp9dzp.jpg" alt="Logo">
-  
+  <img class="logo" src="https://res.cloudinary.com/de6ugxmor/image/upload/v1745771069/WhatsApp_Image_2025-04-27_at_20.58.28_1aecb6e6_hp9dzp.jpg">
+
   <div class="text-container">
-    <div class="name">Kau-shi-can</div>
-    <div class="tagline">Rapid Dine-in Midway System</div>
+    <div class="name">Midway Rapid Dine</div>
+    <div class="tagline">Pre-order your meals before reaching your destination</div>
   </div>
 
   <script>
-    // Wait for the animation to finish and then redirect to page2.html
-    setTimeout(function() {
-      window.location.href = "page2.html";
-    }, 5000); // 5000 ms = 5 seconds to match the animation duration
+    setTimeout(function(){
+      window.location.href="page2.html";
+    },5000);
   </script>
 
 </body>
 </html>
+
