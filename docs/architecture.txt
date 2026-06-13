@@ -1,1 +1,57 @@
 Frontend -> Backend -> Database -> Payment Gateway
+
+Midway Rapid Dine System Architecture
+
+User Interface Layer
+|
+|-- Login System
+|-- Route Selection
+|-- Food Selection
+|-- Hotel Selection
+|-- Payment Page
+|-- Chatbot Support
+|
+V
+
+Frontend Layer
+|
+|-- HTML5
+|-- CSS3
+|-- JavaScript
+|
+V
+
+Application Logic
+|
+|-- Route Validation
+|-- Session-Based Navigation Protection
+|-- Order Workflow Management
+|-- Timer System
+|-- Hotel Recommendation Flow
+|
+V
+
+Future Backend Layer
+|
+|-- Authentication API
+|-- Order Management API
+|-- Payment Verification
+|-- ETA Prediction
+|-- User Management
+|
+V
+
+Database Layer
+|
+|-- User Data
+|-- Orders
+|-- Hotel Data
+|-- Food Items
+|-- Transactions
+|
+V
+
+Deployment Layer
+|
+|-- GitHub Pages
+|-- Future Cloud Deployment
