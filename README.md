@@ -134,3 +134,10 @@ Kumar Karthikk
 ## Status
 
 Frontend Prototype Version
+
+## Upcoming Features
+
+- Backend Integration
+- Authentication
+- Real-time Tracking
+- Payment Gateway
