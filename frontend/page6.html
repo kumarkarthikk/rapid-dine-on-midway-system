@@ -265,6 +265,13 @@ if(!sessionStorage.getItem("page5Completed")){
 
 function goToPayment(){
 
+  const selectedHotels=document.querySelectorAll('.checkbox-container:checked');
+
+  if(selectedHotels.length===0){
+    alert("Please select a hotel before proceeding to payment.");
+    return;
+  }
+
   sessionStorage.setItem("page6Completed","true");
 
   window.location.href="page7.html";
