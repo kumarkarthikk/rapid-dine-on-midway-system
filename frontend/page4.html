@@ -270,6 +270,13 @@ if(!sessionStorage.getItem("page3Completed")){
 <script>
 function goToPage5(){
 
+  const checkedItems=document.querySelectorAll('input[type="checkbox"]:checked');
+
+  if(checkedItems.length===0){
+    alert("Please select at least one food item.");
+    return;
+  }
+
   sessionStorage.setItem("page4Completed","true");
 
   window.location.href="page5.html";
