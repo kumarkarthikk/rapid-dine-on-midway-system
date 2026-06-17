@@ -282,6 +282,20 @@ function goToPage5(){
   window.location.href="page5.html";
 
 }
+const selectedFoods=[];
+
+document.querySelectorAll('input[type="checkbox"]:checked')
+.forEach(item=>{
+  selectedFoods.push(
+    item.parentElement.querySelector("p").innerText
+  );
+});
+
+localStorage.setItem(
+  "selectedFoods",
+  JSON.stringify(selectedFoods)
+);
+
 </script>
 
 </body>
