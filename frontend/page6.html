@@ -277,7 +277,11 @@ function goToPayment(){
   window.location.href="page7.html";
 
 }
-
+document.getElementById("routeInfo").innerHTML =
+"Route : " +
+localStorage.getItem("startLocation") +
+" → " +
+localStorage.getItem("endLocation");
 </script>
 
 </body>
