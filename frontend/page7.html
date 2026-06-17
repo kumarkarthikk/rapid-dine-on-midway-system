@@ -161,7 +161,9 @@ if(!sessionStorage.getItem("page6Completed")){
     <div class="payment-message">
       Please scan the QR code to make your payment.
     </div>
-
+      <button onclick="paymentDone()">
+          Payment Completed
+      </button>
   </div>
 
 </div>
@@ -185,6 +187,14 @@ if(!sessionStorage.getItem("page6Completed")){
   sessionStorage.setItem("page6Completed","true");
 
   window.location.href="page7.html";
+
+}
+
+function paymentDone(){
+
+  alert(
+    "Order confirmed successfully. Your food will be prepared before arrival."
+  );
 
 }
 </script>
